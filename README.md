@@ -1,38 +1,44 @@
-# Shopping List App
+# 🛒 Shopping List App
 
-This is a simple shopping list application built with Vanilla JavaScript. It allows users to add, update, and delete items from the list. The application uses local storage, so the list remains available even after a page refresh.
+A sleek and interactive shopping list application built with **Vanilla JavaScript**, **HTML** and **CSS**. It allows users to add, update, delete and filter items from the list with support for **light/dark** themes. The application uses **local storage**, so the list remains available even after a page refresh.
 
-## App Interface
+## 🎥 Demo
 
-![alt text](./images/shopping-list.png)
+![Shopping List UI](./assets/demo.gif)
 
-## Features
+---
 
-- Add new items to the list
-- Update existing items
-- Delete items from the list
-- Persist the list in local storage for availability across sessions
+## ✨ Features
 
-## How to Use
+- ✅ **Add Items** — Add items with a single click.
+- 📝 **Edit Items** — Update item names with an intuitive edit mode.
+- 🗑️ **Delete Items** — Remove items individually with confirmation.
+- 🚮 **Clear All** — Remove all items at once.
+- 🔍 **Live Filter** — Search through your list as you type.
+- 💾 **Local Storage** — List is saved even after refreshing or closing the browser.
+- 🎨 **Theme Toggle** — Switch between light and dark themes.
+- 🚫 **Duplicate Prevention** — Prevents adding the same item twice.
+- 🛡️ **Validation** — Ensures item names are between 3–20 characters.
 
-1. Enter the name of the item in the input field.
-2. Click the 'Add' button to add the item to the list.
-3. To update an item, click on the item name, modify it, and press 'Enter'.
-4. To delete an item, click the 'Delete' button next to the item.
+---
 
-## Project Setup
+## 🛠️ Tech Stack
 
-No special setup is required. Just clone the repository and open `index.html` in your browser.
+<p>
+  <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=fff" />
+  <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=fff" />
+  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=000" />
+  <img alt="Font Awesome" src="https://img.shields.io/badge/Font%20Awesome-339AF0?style=for-the-badge&logo=fontawesome&logoColor=fff" />
+</p>
+
+---
+
+## 📦 Getting Started
+
+No installation required — just open the `index.html` file in your browser.
 
 ```bash
-git clone <https://github.com/Umairulislam/Shopping-List-Project.git>
-cd <Shopping-List-Project>
+git clone https://github.com/Umairulislam/shopping-list-app.git
+cd Shopping-List-Project
 open index.html
 ```
-
-## Technologies Used
-
-- HTML
-- CSS
-- JavaScript
-- Bootstrap
