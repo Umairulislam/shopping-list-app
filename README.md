@@ -39,6 +39,6 @@ No installation required — just open the `index.html` file in your browser.
 
 ```bash
 git clone https://github.com/Umairulislam/shopping-list-app.git
-cd Shopping-List-Project
+cd shopping-list-app
 open index.html
 ```
