@@ -1,101 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- External Styles -->
     <link rel="stylesheet" href="style.css" />
+
     <title>Shopping List</title>
   </head>
   <body>
     <div class="container">
-      <header>
-        <img src="images/note.png" alt="note" width="80px" />
+      <!-- Header Section -->
+      <header class="app-header">
         <h1>Shopping List</h1>
+        <button id="theme-toggle" class="theme-toggle" title="Toggle Theme">
+          <i class="fa-solid fa-circle-half-stroke fa-xl"></i>
+        </button>
       </header>
-      <form id="item-form">
-        <div class="form-control">
-          <input
-            type="text"
-            class="form-input form-something"
-            id="item-input"
-            name="item"
-            placeholder="Enter Item"
-          />
-        </div>
-        <div class="form-control">
-          <button type="submit" class="btn" id="form-btn">
-            <i class="fa-solid fa-plus"></i> Add Item
+
+      <!-- Main Content -->
+      <main>
+        <!-- Add Item Form -->
+        <section class="add-section">
+          <form id="item-form" class="item-form">
+            <div class="form-group">
+              <input type="text" id="item-input" class="item-input" placeholder="Add item" />
+              <button type="submit" class="add-btn">
+                <i class="fa-solid fa-plus"></i> Add Item
+              </button>
+            </div>
+            <p class="error-message" id="input-error"></p>
+          </form>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filter-section">
+          <div class="filter-group">
+            <input type="text" class="filter-input" placeholder="Filter items" />
+          </div>
+        </section>
+
+        <!-- Shopping List -->
+        <section class="list-section">
+          <ul id="item-list" class="item-list">
+            <!-- Example Items (for development/testing) -->
+            <!-- <li class="item">
+              <span class="item-text">Fish</span>
+              <div class="item-actions">
+                <button class="delete-btn" title="Delete"><i class="fa-solid fa-trash"></i></button>
+                <button class="edit-btn" title="Edit">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+              </div>
+            </li> -->
+          </ul>
+        </section>
+
+        <!-- Clear All Button -->
+        <section class="clear-section">
+          <button id="clear-btn" class="clear-btn" title="Clear all">
+            <i class="fa-solid fa-broom"></i> Clear All
           </button>
-        </div>
-      </form>
-
-      <div class="filter">
-        <input
-          type="text"
-          class="form-input-filter"
-          id="filter"
-          placeholder="Filter Items"
-        />
-      </div>
-
-      <ul id="item-list" class="items">
-        <!-- <li>
-          Apples
-          <div class="btn-container">
-            <button class="edit-item btn-link">
-              <i class="fa-solid fa-pen-to-square"></i>
-            </button>
-            <button class="remove-item btn-link">
-              <i class="fa-solid fa-trash"></i>
-            </button>
-          </div>
-        </li>
-        <li>
-          Milk
-          <div class="btn-container">
-            <button class="edit-item btn-link">
-              <i class="fa-solid fa-pen-to-square"></i>
-            </button>
-            <button class="remove-item btn-link">
-              <i class="fa-solid fa-trash"></i>
-            </button>
-          </div>
-        </li>
-        <li>
-          Banana
-          <div class="btn-container">
-            <button class="edit-item btn-link">
-              <i class="fa-solid fa-pen-to-square"></i>
-            </button>
-            <button class="remove-item btn-link">
-              <i class="fa-solid fa-trash"></i>
-            </button>
-          </div>
-        </li>
-        <li>
-          Eggnog
-          <div class="btn-container">
-            <button class="edit-item btn-link">
-              <i class="fa-solid fa-pen-to-square"></i>
-            </button>
-            <button class="remove-item btn-link">
-              <i class="fa-solid fa-trash"></i>
-            </button>
-          </div>
-        </li> -->
-      </ul>
-
-      <button id="clear" class="btn-clear">Clear All</button>
+        </section>
+      </main>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Modal -->
+    <!-- <div class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2></h2>
+        <div class="modal-buttons">
+          <button class="confirm-btn">Confirm</button>
+          <button class="cancel-btn">Cancel</button>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
   </body>
 </html>
